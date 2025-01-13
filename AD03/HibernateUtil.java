@@ -5,11 +5,12 @@ public class HibernateUtil {
     // Código estático. Sólo se ejecuta una vez, como un Singleton
     static {
         try {
-            // Creamos es SessionFactory desde el fichero hibernate.cfg.xml 
+            // Creamos el SessionFactory desde el archivo estándar de configuración (hibernate.cfg.xml)
             sessionFactory = new Configuration()
                 .configure(new File("hibernate.cfg.xml")).buildSessionFactory();    
         } catch (HibernateException ex) {
-            System.err.println("Error en la inicialización.  " + ex);
+            // Log the exception.
+            System.err.println("Error en la inicialización de SessionFactory." + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }
