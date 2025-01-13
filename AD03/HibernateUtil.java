@@ -8,7 +8,7 @@ public class HibernateUtil {
             // Creamos es SessionFactory desde el fichero hibernate.cfg.xml 
             sessionFactory = new Configuration()
                 .configure(new File("hibernate.cfg.xml")).buildSessionFactory();    
-        } catch (Throwable ex) {
+        } catch (HibernateException ex) {
             System.err.println("Error en la inicialización.  " + ex);
             throw new ExceptionInInitializerError(ex);
         }
