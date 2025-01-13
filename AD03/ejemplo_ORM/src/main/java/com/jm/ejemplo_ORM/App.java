@@ -7,7 +7,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import java.io.File;
+
 
 /**
  * Primer proyecto ORM con Hibernate
